@@ -5,11 +5,16 @@ import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity
+//Permite que JPA administre esta clase y sus instancias, convirtiéndola en una tabla en la base de datos y permitiendo operaciones CRUD automáticas.
+
 @Table(name="productos")
+//Define que esta entidad se debe mapear a la tabla productos en la base de datos.
 public class Producto {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    // Usa la estrategia IDENTITY para que la base de datos auto-incremente el valor del campo id.
+
     private int id;
     private String categoria;
     private String nombre;

@@ -5,12 +5,15 @@ import jakarta.validation.constraints.*;
 
 public class ProductoDto {
     @NotEmpty(message ="El nombre es obligatorio")
+    //Asegura que el campo no sea nulo ni vacío
+
     private String nombre;
 
     @NotEmpty(message ="El nombre de la categoría es obligatorio")
     private String categoria;
 
     @Min(0)
+    //Asegura que el valor del campo sea mayor o igual a un valor mínimo especificado.
     private double precio;
 
     @Size(max = 3000, message = "La descripcion no debe exceder los 3000 caracteres")
